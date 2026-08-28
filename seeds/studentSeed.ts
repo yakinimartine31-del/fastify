@@ -1,0 +1,22 @@
+export const students = [
+  { name: 'Emma Johnson', email: 'emma.johnson@example.com', age: 20 },
+  { name: 'Liam Smith', email: 'liam.smith@example.com', age: 21 },
+  { name: 'Olivia Brown', email: 'olivia.brown@example.com', age: 19 },
+  { name: 'Noah Davis', email: 'noah.davis@example.com', age: 22 },
+  { name: 'Ava Wilson', email: 'ava.wilson@example.com', age: 20 },
+  { name: 'Ethan Miller', email: 'ethan.miller@example.com', age: 23 },
+  { name: 'Sophia Garcia', email: 'sophia.garcia@example.com', age: 19 },
+  { name: 'Mason Martinez', email: 'mason.martinez@example.com', age: 21 },
+  { name: 'Isabella Anderson', email: 'isabella.anderson@example.com', age: 20 },
+  { name: 'William Taylor', email: 'william.taylor@example.com', age: 22 },
+  { name: 'Mia Thomas', email: 'mia.thomas@example.com', age: 18 },
+  { name: 'James Jackson', email: 'james.jackson@example.com', age: 24 },
+  { name: 'Charlotte White', email: 'charlotte.white@example.com', age: 20 },
+  { name: 'Benjamin Harris', email: 'benjamin.harris@example.com', age: 21 },
+  { name: 'Amelia Clark', email: 'amelia.clark@example.com', age: 19 },
+  { name: 'Lucas Lewis', email: 'lucas.lewis@example.com', age: 23 },
+  { name: 'Harper Robinson', email: 'harper.robinson@example.com', age: 20 },
+  { name: 'Henry Walker', email: 'henry.walker@example.com', age: 22 },
+  { name: 'Evelyn Hall', email: 'evelyn.hall@example.com', age: 18 },
+  { name: 'Alexander Allen', email: 'alexander.allen@example.com', age: 24 }
+]

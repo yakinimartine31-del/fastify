@@ -1,0 +1,22 @@
+export const teachers = [
+  { name: 'Dr. Sarah Johnson', email: 'sarah.johnson@school.edu', subject: 'Mathematics' },
+  { name: 'Prof. Michael Smith', email: 'michael.smith@school.edu', subject: 'Physics' },
+  { name: 'Dr. Emily Brown', email: 'emily.brown@school.edu', subject: 'Chemistry' },
+  { name: 'Mr. David Davis', email: 'david.davis@school.edu', subject: 'Biology' },
+  { name: 'Ms. Jessica Wilson', email: 'jessica.wilson@school.edu', subject: 'English' },
+  { name: 'Dr. James Miller', email: 'james.miller@school.edu', subject: 'History' },
+  { name: 'Prof. Maria Garcia', email: 'maria.garcia@school.edu', subject: 'Geography' },
+  { name: 'Mr. Robert Martinez', email: 'robert.martinez@school.edu', subject: 'Computer Science' },
+  { name: 'Dr. Linda Anderson', email: 'linda.anderson@school.edu', subject: 'Economics' },
+  { name: 'Ms. Jennifer Taylor', email: 'jennifer.taylor@school.edu', subject: 'Psychology' },
+  { name: 'Prof. William Thomas', email: 'william.thomas@school.edu', subject: 'Philosophy' },
+  { name: 'Dr. Patricia Jackson', email: 'patricia.jackson@school.edu', subject: 'Sociology' },
+  { name: 'Mr. Richard White', email: 'richard.white@school.edu', subject: 'Political Science' },
+  { name: 'Ms. Elizabeth Harris', email: 'elizabeth.harris@school.edu', subject: 'Literature' },
+  { name: 'Dr. George Clark', email: 'george.clark@school.edu', subject: 'Art History' },
+  { name: 'Prof. Susan Lewis', email: 'susan.lewis@school.edu', subject: 'Music' },
+  { name: 'Mr. Daniel Robinson', email: 'daniel.robinson@school.edu', subject: 'Physical Education' },
+  { name: 'Dr. Karen Walker', email: 'karen.walker@school.edu', subject: 'Health' },
+  { name: 'Ms. Nancy Hall', email: 'nancy.hall@school.edu', subject: 'Foreign Languages' },
+  { name: 'Prof. Steven Allen', email: 'steven.allen@school.edu', subject: 'Engineering' }
+]
