@@ -1,6 +1,8 @@
 'use strict'
 
+import 'dotenv/config'
 import path from 'node:path'
+import { mkdirSync } from 'node:fs'
 import AutoLoad from '@fastify/autoload'
 import { fileURLToPath } from 'node:url'
 import mysql from '@fastify/mysql'
@@ -17,8 +19,17 @@ export const options: Record<string, unknown> = {}
 
 export default async function (fastify: any, opts: Record<string, unknown>) {
   fastify.register(cors, { origin: '*' })
+  
+  // Create uploads directory if it doesn't exist
+  const uploadsDir = path.join(__dirname, 'uploads')
+  try {
+    mkdirSync(uploadsDir, { recursive: true })
+  } catch (err) {
+    // Directory might already exist, that's fine
+  }
+  
   fastify.register(fastifyStatic, {
-    root: path.join(__dirname, 'uploads'),
+    root: uploadsDir,
     prefix: '/uploads/'
   })
   fastify.register((await import('@fastify/multipart')).default, {
@@ -33,7 +44,7 @@ export default async function (fastify: any, opts: Record<string, unknown>) {
         version: '1.0.0'
       },
       servers: [
-        { url: 'http://localhost:3000', description: 'Development server' }
+        { url: process.env.API_URL || 'http://localhost:3000', description: 'API server' }
       ],
       tags: [
         { name: 'auth', description: 'Authentication endpoints' },
@@ -76,7 +87,7 @@ export default async function (fastify: any, opts: Record<string, unknown>) {
   })
 
   fastify.register(jwt, {
-    secret: 'your-secret-key-change-in-production'
+    secret: process.env.JWT_SECRET || 'your-secret-key-change-in-production'
   })
 
   fastify.decorate('authenticate', async (request, reply) => {
