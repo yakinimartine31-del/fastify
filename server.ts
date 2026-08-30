@@ -16,6 +16,34 @@ const fastify = Fastify({
 const app = await import('./app.ts')
 fastify.register(app.default, app.options)
 
+fastify.get('/', async (request, reply) => {
+  return {
+    message: 'Welcome to the Dating Social API',
+    version: '1.0.0',
+    documentation: '/docs',
+    health: '/health',
+    endpoints: {
+      auth: '/auth',
+      profile: '/profile',
+      discover: '/discover',
+      chat: '/chat',
+      feed: '/feed',
+      games: '/games',
+      wallet: '/wallet',
+      safety: '/safety',
+      stories: '/stories',
+      notifications: '/notifications',
+      matches: '/matches',
+      icebreakers: '/icebreakers',
+      anonymous: '/anonymous',
+      prompts: '/prompts',
+      albums: '/albums',
+      winks: '/winks',
+      moods: '/moods'
+    }
+  }
+})
+
 fastify.get('/health', async (request, reply) => {
   return {
     status: 'ok',
